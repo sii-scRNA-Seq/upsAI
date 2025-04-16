@@ -1,6 +1,6 @@
 # upsAI: A Classifier for *Plasmodium falciparum* var Gene Upstream Groups
 
-**upsAI** is a machine learning-based classifier that predicts the upstream group (upsA, upsB, upsC, or upsE) of *Plasmodium falciparum* var genes from tag sequences, exon 1, or full gene sequences. This tool enables accurate and rapid assignment of var genes to upstream groups, an important step for understanding the parasite’s role in disease severity and immune evasion.
+**upsAI** is a machine learning-based classifier that predicts the upstream group (upsA, upsB, upsC, or upsE) of *Plasmodium falciparum* var genes from tag sequences. This tool enables accurate and rapid assignment of var genes to upstream groups, an important step for understanding the parasite’s role in disease severity and immune evasion.
 
 ---
 

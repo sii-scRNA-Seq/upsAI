@@ -14,5 +14,5 @@ To address the need for an accurate classifier, we developed **upsAI** using a c
 ### Usage
 
 ```bash
-python UpsAI.py <input_fasta_path> <gene_location>
+python upsAI.py <input_fasta_path> <gene_location>
 ```

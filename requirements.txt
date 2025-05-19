@@ -1,5 +1,4 @@
-pandas
 numpy
-scikit-learn
-biopython
 joblib
+biopython
+scikit-learn

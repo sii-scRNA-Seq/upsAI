@@ -64,7 +64,7 @@ tar -xvzf tag_abc_linear.tar.gz -C ./models/
 
 The table below summarizes the classification accuracy of the top-performing models for different input regions and classification tasks. Models were evaluated based on prediction accuracy of **upstream group (ups type)** and **subcellular localization** using various feature regions (e.g., full var gene, exon 1, cassette, tag).
 
-### Upstream Group (ups type) Classification
+### Upstream Group (ups type) Classification (abc/e: upsA, upsB, upsC, upsE)
 
 | Input Region | Accuracy | Top Models                                       |
 |--------------|----------|--------------------------------------------------|
@@ -73,7 +73,7 @@ The table below summarizes the classification accuracy of the top-performing mod
 | exon 1       | 0.90     | SVM Sigmoid, XGBoost                             |
 | var          | 0.92     | SVM Linear, SVM RBF, SVM Sigmoid                 |
 
-### Subcellular Localization Prediction
+### Subcellular Localization Prediction (intsub: upsA, upsB subtelomeric, upsB/upsC internal, upsE)
 
 | Input Region | Accuracy | Top Models                                          |
 |--------------|----------|-----------------------------------------------------|

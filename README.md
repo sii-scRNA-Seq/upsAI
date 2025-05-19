@@ -36,6 +36,7 @@ python upsAI.py -i <input_fasta_path> -m <model_name>
 
 ```bash
 python upsAI.py [OPTIONS]
+```
 
 | Option                | Description                                                         |
 | --------------------- | ------------------------------------------------------------------- |
@@ -45,7 +46,7 @@ python upsAI.py [OPTIONS]
 | `-d`, `--model-dir`   | Directory containing trained models (default: `./models`)           |
 | `--list-models`       | List all available models in the specified model directory and exit |
 | `-v`, `--version`     | Show the current version of upsAI and exit                          |
-```
+
 
 **Note:**
 - Only a subset of pre-trained models is included in this GitHub repository.
@@ -56,3 +57,29 @@ Example:
 ```bash
 tar -xvzf tag_abc_linear.tar.gz -C ./models/
 ```
+
+---
+
+## Model Performance
+
+The table below summarizes the classification accuracy of the top-performing models for different input regions and classification tasks. Models were evaluated based on prediction accuracy of **upstream group (ups type)** and **subcellular localization** using various feature regions (e.g., full var gene, exon 1, cassette, tag).
+
+### Upstream Group (ups type) Classification
+
+| Input Region | Accuracy | Top Models                                       |
+|--------------|----------|--------------------------------------------------|
+| tag          | 0.85     | SVM Poly, SVM RBF                                |
+| cassette     | 0.87     | SVM Linear                                       |
+| exon 1       | 0.90     | SVM Sigmoid, XGBoost                             |
+| var          | 0.92     | SVM Linear, SVM RBF, SVM Sigmoid                 |
+
+### Subcellular Localization Prediction
+
+| Input Region | Accuracy | Top Models                                          |
+|--------------|----------|-----------------------------------------------------|
+| tag          | 0.78     | SVM Poly, SVM RBF, Random Forest                    |
+| cassette     | 0.82     | SVM RBF                                             |
+| exon 1       | 0.84     | SVM Linear, SVM RBF, XGBoost                        |
+| var          | 0.92     | SVM Linear, SVM Poly, SVM RBF, SVM Sigmoid, XGBoost |
+
+**Note:** var-based models generally offer the highest accuracy across both classification tasks.

@@ -1,4 +1,4 @@
-# upsAI: A Classifier for *Plasmodium falciparum* var Gene Upstream Groups
+# upsAI: A high-accuracy machine learning classifier for predicting *Plasmodium falciparum* var gene upstream groups 
 
 **upsAI** is a machine learning-based classifier that predicts the upstream group (upsA, upsB, upsC, or upsE) or localization (upsA, upsB subtelomeric, upsB/upsC internal, or upsE) of *Plasmodium falciparum* var genes from tag, cassette, exon 1, or entire var gene sequences. This tool enables accurate and rapid assignment of var genes to upstream groups, an important step for understanding the parasite’s role in disease severity and immune evasion.
 
@@ -19,6 +19,7 @@ Clone this repository and install the dependencies:
 git clone https://github.com/sii-scRNA-Seq/upsAI.git
 cd upsAI
 pip install -r requirements.txt
+tar -xvzf ./models/tag_abc_linear.tar.gz ./models/tag_intsub_linear.tar.gz -C ./models/
 ```
 
 ---
@@ -44,4 +45,14 @@ python upsAI.py [OPTIONS]
 | `-d`, `--model-dir`   | Directory containing trained models (default: `./models`)           |
 | `--list-models`       | List all available models in the specified model directory and exit |
 | `-v`, `--version`     | Show the current version of upsAI and exit                          |
+```
+
+**Note:**
+- Only a subset of pre-trained models is included in this GitHub repository.
+- Additional models can be downloaded from 10.5281/zenodo.15462399
+- Downloaded models are provided as .tar.gz archives and must be decompressed before use.
+
+Example:
+```bash
+tar -xvzf tag_abc_linear.tar.gz -C ./models/
 ```

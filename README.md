@@ -50,7 +50,7 @@ python upsAI.py [OPTIONS]
 
 **Note:**
 - Only a subset of pre-trained models is included in this GitHub repository.
-- Additional models can be downloaded from 10.5281/zenodo.15462399
+- Additional models can be downloaded from https://zenodo.org/records/15462399
 - Downloaded models are provided as .tar.gz archives and must be decompressed before use.
 
 Example:
